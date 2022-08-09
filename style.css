@@ -92,9 +92,9 @@ h1{
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%) scale(1.75);
   background: #fff;
-  max-width: 700px;
+  max-width: 1200px;
   width: 100%;
   z-index: 5;
   opacity: 0;
@@ -107,7 +107,7 @@ h1{
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 .preview-box .details{
   padding: 13px 15px 13px 10px;
