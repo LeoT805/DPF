@@ -22,8 +22,9 @@
       </div>
     </nav>
     <!-- filter Images -->
-    <div class="gallery">
-      <!-- beds -->
+    <div class="container">
+        <div class="image-container">
+           <!-- beds -->
       <div class="image" data-name="Beds"><span><img src="images/bed1.JPEG" alt=""></span></div>
       <div class="image" data-name="Beds"><span><img src="images/bed2.JPEG" alt=""></span></div>
       <div class="image" data-name="Beds"><span><img src="images/bed3.JPEG" alt=""></span></div>
@@ -64,17 +65,24 @@
       <!-- vanitys -->
       <div class="image" data-name="Van"><span><img src="images/Vanity1.JPEG" alt=""></span></div>
       <div class="image" data-name="Van"><span><img src="images/Vanity2.JPEG" alt=""></span></div>
+        </div>
+        
+        <div class="popup-image">   
+            <span class="pis">&times;</span>
+            <img src="photos/G1.JPG" alt="Coupe1">
+        </div>
+        <script>
+            document.querySelectorAll('.image-container img').forEach(image =>{
+                image.onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'block';
+                    document.querySelector('.popup-image img').src = image.getAttribute('src');
+                }
+            });
+            document.querySelector('.popup-image span') .onclick = () => {
+                document.querySelector('.popup-image').style.display = 'none';
+            }
+        </script>
     </div>
-  </div>
-  <!-- fullscreen img preview box -->
-  <div class="preview-box">
-    <div class="details">
-      <span class="title">Image Category: <p></p></span>
-      <span class="icon fas fa-times"></span>
-    </div>
-    <div class="image-box"><img src="" alt=""></div>
-  </div>
-  <div class="shadow"></div>
 
   <script src="script.js"></script>
 
